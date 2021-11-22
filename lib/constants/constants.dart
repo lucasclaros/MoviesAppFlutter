@@ -14,7 +14,7 @@ class Constants {
   static const String DATA_IMDB_API = 'https://data-imdb1.p.rapidapi.com/movie/id/';
   static const Map<String, String> headers = {
     'x-rapidapi-host': 'data-imdb1.p.rapidapi.com',
-    'x-rapidapi-key': 'your_rapidapi_key',
+    'x-rapidapi-key': 'your_rapidapi_key', //25f1cc81d4msh1586f9199becdd4p110e4ajsna10616dd16af
   };
 
   static const String defaultFont = 'GothamBlack';
