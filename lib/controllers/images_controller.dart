@@ -58,7 +58,7 @@ class GetImdbPoster extends StatelessWidget {
           return Center(child: Image.asset('assets/tokenlab.png'));
         } else {
           return const Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(color: Constants.backgroundColor,),
           );
         }
       },
