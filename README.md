@@ -1,16 +1,8 @@
 # Top 20 Movies App
 
-This is my first flutter app, it consists in displaying a selectable list of movies which 
+This is my first flutter app, it displays a selectable list of movies in which each movie has its details shown 
+in another separate page.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Besides all, this is also a Internship Program Selection Challenge from Tokelab LTD Inc. It was awesome investing my time and effort to learn flutter and build this app. I really aprecciate the oportunity and i hope to keep on this way of mobile programming.
