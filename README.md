@@ -1,6 +1,6 @@
-# movies_app
+# Top 20 Movies App
 
-A Top 20 Movies app
+This is my first flutter app, it consists in displaying a selectable list of movies which 
 
 ## Getting Started
 

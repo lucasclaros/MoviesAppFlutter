@@ -26,7 +26,7 @@ class MoviePoster extends StatelessWidget {
 
 ///   This functions can be used when the poster_path from original
 ///  endpoint do not response a valid image. You can change the
-///  Image.asset from MoviePoster function to GetImdbPoster (wich
+///  Image.asset from MoviePoster function to GetImdbPoster (which
 ///  requires the movie id from the original list).
 class GetImdbPoster extends StatelessWidget {
   final int id;
