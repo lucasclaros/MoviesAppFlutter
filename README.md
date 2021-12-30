@@ -5,13 +5,4 @@ in another separate page.
 
 ## Tokenlab Challenge
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Besides all, this is also a Internship Program Selection Challenge from Tokelab LTD Inc. It was awesome investing my time and effort to learn flutter and build this app. I really aprecciate the oportunity and i hope to keep on this way of mobile programming.
