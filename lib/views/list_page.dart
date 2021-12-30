@@ -50,7 +50,7 @@ class _ListPageState extends State<ListPage> {
     }
     return  ListView.builder(
         physics: const AlwaysScrollableScrollPhysics (),
-        //cacheExtent: (1920 / (MediaQuery.of(context).size.height)) * 180 * 20,
+        cacheExtent: (1920 / (MediaQuery.of(context).size.height)) * 180 * 20,
         itemCount: _controller.moviesList!.length,
         itemBuilder: (context, index) {
           return MovieRow(movieList: _controller.moviesList!, index: index);

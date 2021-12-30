@@ -18,7 +18,7 @@ class MoviePoster extends StatelessWidget {
       fit: BoxFit.cover,
       imageUrl: url,
       placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
-      errorWidget: (context, url, error) => Image.asset('assets/tokenlab.png'), //GetImdbPoster(id: int.parse(id.toString()),),
+      errorWidget: (context, url, error) => Image.asset("assets/tokenlab.png"), //GetImdbPoster(id: int.parse(id.toString()),),
     );
   }
 }
@@ -28,22 +28,32 @@ class MoviePoster extends StatelessWidget {
 ///  endpoint do not response a valid image. You can change the
 ///  Image.asset from MoviePoster function to GetImdbPoster (which
 ///  requires the movie id from the original list).
-class GetImdbPoster extends StatelessWidget {
+class GetImdbPoster extends StatefulWidget {
   final int id;
-  final _controller = MovieController();
-
+  final controller = MovieController();
   GetImdbPoster({Key? key, required this.id}) : super(key: key);
 
+  @override
+  _GetImdbPosterState createState() => _GetImdbPosterState();
+}
+
+class _GetImdbPosterState extends State<GetImdbPoster> {
+  late Future<ImdbPoster> _poster;
   Future<ImdbPoster> getPoster() async {
-    await _controller.fetchMoviebyID(id);
-    final responseImdb = await http.get(Uri.parse(Constants.DATA_IMDB_API + _controller.movie.imdbId.toString() + '/'), headers: Constants.headers);
+    await widget.controller.fetchMoviebyID(widget.id);
+    final responseImdb = await http.get(Uri.parse(Constants.DATA_IMDB_API + widget.controller.movie.imdbId.toString() + '/'), headers: Constants.headers);
     return imageFromJson(responseImdb.body);
   }
 
   @override
+  void initState(){
+    super.initState();
+    _poster = getPoster();
+  }
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder<ImdbPoster>(
-      future: getPoster(),
+      future: _poster,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return CachedNetworkImage(
@@ -58,10 +68,11 @@ class GetImdbPoster extends StatelessWidget {
           return Center(child: Image.asset('assets/tokenlab.png'));
         } else {
           return const Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(color: Constants.backgroundColor,),
           );
         }
       },
     );
   }
 }
+

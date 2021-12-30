@@ -1,8 +1,9 @@
 # Top 20 Movies App
 
-This is my first flutter app, it consists in displaying a selectable list of movies which 
+This is my first flutter app, it displays a selectable list of movies in which each movie has its details shown 
+in another separate page.
 
-## Getting Started
+## Tokenlab Challenge
 
 This project is a starting point for a Flutter application.
 
